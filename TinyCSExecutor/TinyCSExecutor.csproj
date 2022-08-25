@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3D2CD041-F872-4FB0-9532-8FF87902B324}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>TinyCSExecutor</RootNamespace>
+    <AssemblyName>TinyCSExecutor</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\exceptions\JobCreationException.cs" />
+    <Compile Include="Core\exceptions\OperationCreationException.cs" />
+    <Compile Include="Core\exceptions\OperationExecutionException.cs" />
+    <Compile Include="Core\executors\DefaultJobExecutor.cs" />
+    <Compile Include="Core\executors\internals\CmdOperationExecutor.cs" />
+    <Compile Include="Core\executors\internals\IOperationExecutor.cs" />
+    <Compile Include="Core\executors\internals\SyncDownloadOperationExecutor.cs" />
+    <Compile Include="Core\executors\JobExecutor.cs" />
+    <Compile Include="Core\Job.cs" />
+    <Compile Include="Core\Operations\cmd\CmdOperation.cs" />
+    <Compile Include="Core\Operations\cmd\CmdOperationResult.cs" />
+    <Compile Include="Core\Operations\download\SyncDownloadOperation.cs" />
+    <Compile Include="Core\Operations\download\SyncDownloadOperationResult.cs" />
+    <Compile Include="Core\Operations\IOperation.cs" />
+    <Compile Include="Core\Operations\IOperationExecutionResult.cs" />
+    <Compile Include="Core\readers\CmdOperationStringReader.cs" />
+    <Compile Include="Core\readers\factory\IOperationReaderFactory.cs" />
+    <Compile Include="Core\readers\factory\StringOperationReaderFactory.cs" />
+    <Compile Include="Core\readers\factory\XmlOperationReaderFactory.cs" />
+    <Compile Include="Core\readers\IJobReader.cs" />
+    <Compile Include="Core\readers\job\TextFileJobReaderFactory.cs" />
+    <Compile Include="Core\readers\job\JobType.cs" />
+    <Compile Include="Core\readers\job\IJobReaderFactory.cs" />
+    <Compile Include="Core\readers\operations\IOperationReader.cs" />
+    <Compile Include="Core\readers\operations\OperationType.cs" />
+    <Compile Include="Core\readers\operations\pool\IObjectPool.cs" />
+    <Compile Include="Core\readers\operations\pool\OperationsReadersObjectPool.cs" />
+    <Compile Include="Core\readers\SyncDownloadOperationStringReader.cs" />
+    <Compile Include="Core\readers\TextFileJobReader.cs" />
+    <Compile Include="App.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".gitignore" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ExecutorCore\ExecutorCore.csproj">
+      <Project>{6dc54038-a9a6-43e4-a097-58dbaef6bf1e}</Project>
+      <Name>ExecutorCore</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

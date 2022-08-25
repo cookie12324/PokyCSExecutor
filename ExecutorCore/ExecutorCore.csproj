@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6DC54038-A9A6-43E4-A097-58DBAEF6BF1E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ExecutorCore</RootNamespace>
+    <AssemblyName>ExecutorCore</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\exceptions\JobCreationException.cs" />
+    <Compile Include="Core\exceptions\OperationCreationException.cs" />
+    <Compile Include="Core\exceptions\OperationExecutionException.cs" />
+    <Compile Include="Core\executors\DefaultJobExecutor.cs" />
+    <Compile Include="Core\executors\internals\CmdOperationExecutor.cs" />
+    <Compile Include="Core\executors\internals\IOperationExecutor.cs" />
+    <Compile Include="Core\executors\internals\SyncDownloadOperationExecutor.cs" />
+    <Compile Include="Core\executors\JobExecutor.cs" />
+    <Compile Include="Core\Job.cs" />
+    <Compile Include="Core\Operations\cmd\CmdOperation.cs" />
+    <Compile Include="Core\Operations\cmd\CmdOperationResult.cs" />
+    <Compile Include="Core\Operations\download\SyncDownloadOperation.cs" />
+    <Compile Include="Core\Operations\download\SyncDownloadOperationResult.cs" />
+    <Compile Include="Core\Operations\IOperation.cs" />
+    <Compile Include="Core\Operations\IOperationExecutionResult.cs" />
+    <Compile Include="Core\readers\CmdOperationStringReader.cs" />
+    <Compile Include="Core\readers\factory\IOperationReaderFactory.cs" />
+    <Compile Include="Core\readers\factory\StringOperationReaderFactory.cs" />
+    <Compile Include="Core\readers\factory\XmlOperationReaderFactory.cs" />
+    <Compile Include="Core\readers\IJobReader.cs" />
+    <Compile Include="Core\readers\operations\IOperationReader.cs" />
+    <Compile Include="Core\readers\operations\OperationType.cs" />
+    <Compile Include="Core\readers\operations\pool\IObjectPool.cs" />
+    <Compile Include="Core\readers\operations\pool\OperationsReadersObjectPool.cs" />
+    <Compile Include="Core\readers\SyncDownloadOperationStringReader.cs" />
+    <Compile Include="Core\readers\TextFileJobReader.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
