@@ -1,8 +1,8 @@
 ﻿using PokyExecutorCore.Core;
 using PokyExecutorCore.Core.Executors;
-using PokyCSExecutor.Core.readers.job;
+using PokyExecutor.Core.readers.job;
 
-namespace PokyCSExecutor
+namespace PokyExecutor
 {
     class App
     {

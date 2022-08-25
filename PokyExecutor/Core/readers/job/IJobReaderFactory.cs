@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PokyCSExecutor.Core.readers.job
+namespace PokyExecutor.Core.readers.job
 {
     internal interface IJobReaderFactory
     {

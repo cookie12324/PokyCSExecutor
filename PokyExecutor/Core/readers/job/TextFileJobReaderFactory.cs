@@ -1,6 +1,6 @@
 ﻿using PokyExecutorCore.Core;
 
-namespace PokyCSExecutor.Core.readers.job
+namespace PokyExecutor.Core.readers.job
 {
     internal class TextFileJobReaderFactory : IJobReaderFactory
     {
