@@ -1,2 +1,2 @@
-# TinyCSExecutor
-Ugly job executor for .NET
+# PokyCSExecutor
+Poky job executor for .NET
