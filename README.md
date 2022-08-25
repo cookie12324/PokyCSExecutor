@@ -1,2 +1,2 @@
-# PokyCSExecutor
-Poky job executor for .NET
+# :ant: PokyExecutor
+Poky job executor for .NET, created to be refactored
