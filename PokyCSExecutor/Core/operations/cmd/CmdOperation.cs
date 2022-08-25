@@ -1,6 +1,6 @@
-﻿using CSJobExecutor.Core.Executors.Internals;
+﻿using PokyExecutorCore.Core.Executors.Internals;
 
-namespace CSJobExecutor.Core.Operations
+namespace PokyExecutorCore.Core.Operations
 {
     class CmdOperation : IOperation
     {

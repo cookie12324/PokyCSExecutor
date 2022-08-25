@@ -5,7 +5,7 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSJobExecutor.Core.Exceptions
+namespace PokyExecutorCore.Core.Exceptions
 {
     class OperationExecutionException : Exception
     {

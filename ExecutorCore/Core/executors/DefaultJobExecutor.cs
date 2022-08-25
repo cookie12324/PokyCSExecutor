@@ -1,8 +1,8 @@
-﻿using CSJobExecutor.Core.Exceptions;
-using CSJobExecutor.Core.Operations;
+﻿using PokyExecutorCore.Core.Exceptions;
+using PokyExecutorCore.Core.Operations;
 using System;
 
-namespace CSJobExecutor.Core.Executors
+namespace PokyExecutorCore.Core.Executors
 {
     class DefaultJobExecutor : JobExecutor
     {

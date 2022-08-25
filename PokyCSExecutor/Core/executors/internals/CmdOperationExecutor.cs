@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.Linq;
 
-namespace CSJobExecutor.Core.Executors.Internals
+namespace PokyExecutorCore.Core.Executors.Internals
 {
     class CmdOperationExecutor : IOperationExecutor<int>
     {

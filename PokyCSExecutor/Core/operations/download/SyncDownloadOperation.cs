@@ -1,7 +1,7 @@
-﻿using CSJobExecutor.Core.Executors.Internals;
-using CSJobExecutor.Core.Operations.download;
+﻿using PokyExecutorCore.Core.Executors.Internals;
+using PokyExecutorCore.Core.Operations.download;
 
-namespace CSJobExecutor.Core.Operations
+namespace PokyExecutorCore.Core.Operations
 {
     class SyncDownloadOperation : IOperation
     {

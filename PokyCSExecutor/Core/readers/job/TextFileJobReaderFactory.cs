@@ -1,6 +1,6 @@
-﻿using CSJobExecutor.Core;
+﻿using PokyExecutorCore.Core;
 
-namespace TinyCSExecutor.Core.readers.job
+namespace PokyCSExecutor.Core.readers.job
 {
     internal class TextFileJobReaderFactory : IJobReaderFactory
     {

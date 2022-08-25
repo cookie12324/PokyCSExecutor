@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSJobExecutor.Core.Readers.Operations.Pool
+namespace PokyExecutorCore.Core.Readers.Operations.Pool
 {
     interface IObjectPool<K, V>
     {

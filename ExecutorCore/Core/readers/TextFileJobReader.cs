@@ -1,13 +1,13 @@
-﻿using CSJobExecutor.Core.Operations;
-using CSJobExecutor.Core.Readers.Factory;
-using CSJobExecutor.Core.Readers.Operations;
-using CSJobExecutor.Core.Readers.Operations.Pool;
+﻿using PokyExecutorCore.Core.Operations;
+using PokyExecutorCore.Core.Readers.Factory;
+using PokyExecutorCore.Core.Readers.Operations;
+using PokyExecutorCore.Core.Readers.Operations.Pool;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace CSJobExecutor.Core
+namespace PokyExecutorCore.Core
 {
     class TextFileJobReader : IJobReader
     {

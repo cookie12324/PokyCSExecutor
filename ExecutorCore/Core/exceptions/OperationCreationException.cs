@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.Serialization;
 
-namespace CSJobExecutor.Core.Exceptions
+namespace PokyExecutorCore.Core.Exceptions
 {
     class OperationCreationException : Exception
     {

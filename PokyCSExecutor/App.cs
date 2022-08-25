@@ -1,8 +1,8 @@
-﻿using CSJobExecutor.Core;
-using CSJobExecutor.Core.Executors;
-using TinyCSExecutor.Core.readers.job;
+﻿using PokyExecutorCore.Core;
+using PokyExecutorCore.Core.Executors;
+using PokyCSExecutor.Core.readers.job;
 
-namespace TinyCSExecutor
+namespace PokyCSExecutor
 {
     class App
     {

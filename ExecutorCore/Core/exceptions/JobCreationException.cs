@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.Serialization;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace CSJobExecutor.Core.Exceptions
+namespace PokyExecutorCore.Core.Exceptions
 {
     class JobCreationException : Exception
     {
@@ -21,7 +17,8 @@ namespace CSJobExecutor.Core.Exceptions
         {
         }
 
-        protected JobCreationException(SerializationInfo info, StreamingContext context) : base(info, context)
+        protected JobCreationException(SerializationInfo info,
+            StreamingContext context) : base(info, context)
         {
         }
     }

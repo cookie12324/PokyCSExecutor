@@ -1,9 +1,9 @@
-﻿using CSJobExecutor.Core.Readers.Operations.Pool;
+﻿using PokyExecutorCore.Core.Readers.Operations.Pool;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 
-namespace CSJobExecutor.Core.Readers.Operations.Pool
+namespace PokyExecutorCore.Core.Readers.Operations.Pool
 {
     class OperationsReadersObjectPool : IObjectPool<OperationType, IOperationReader>
     {

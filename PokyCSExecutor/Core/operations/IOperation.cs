@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSJobExecutor.Core.Operations
+namespace PokyExecutorCore.Core.Operations
 {
     interface IOperation
     {

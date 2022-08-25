@@ -3,7 +3,7 @@ using System.ComponentModel;
 using System.Net;
 using System.Threading;
 
-namespace CSJobExecutor.Core.Executors.Internals
+namespace PokyExecutorCore.Core.Executors.Internals
 {
     class SyncDownloadOperationExecutor : IOperationExecutor<bool>
     {

@@ -1,9 +1,9 @@
-﻿using CSJobExecutor.Core.Exceptions;
-using CSJobExecutor.Core.Readers.Operations;
-using CSJobExecutor.Core.Readers.Operations.Pool;
+﻿using PokyExecutorCore.Core.Exceptions;
+using PokyExecutorCore.Core.Readers.Operations;
+using PokyExecutorCore.Core.Readers.Operations.Pool;
 using System;
 
-namespace CSJobExecutor.Core.Readers.Factory
+namespace PokyExecutorCore.Core.Readers.Factory
 {
     class StringOperationReaderFactory : IOperationReaderFactory
     {

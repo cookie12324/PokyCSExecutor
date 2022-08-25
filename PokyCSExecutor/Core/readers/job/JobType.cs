@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TinyCSExecutor.Core.readers.job
+namespace PokyCSExecutor.Core.readers.job
 {
     enum JobType
     {
